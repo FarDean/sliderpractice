@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    
+    width: 100%;
+    height: 100%;
+    border: 4px solid red;
+}
+.slides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: -1;
+}
+.slides:first-child {
+    background: url(https://pbs.twimg.com/media/EeWbfVYWoAMtulZ?format=jpg&name=small) no-repeat center center/cover;
+}
+.slides:nth-child(2) {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/8/87/Tundra_in_Siberia.jpg) no-repeat center center/cover;
+}
+.slides:nth-child(3) {
+    background: url(aiushtha_enchantress_dota_2_chibi_93823_1920x1080.jpg) no-repeat center center/cover;
+}
+.slides:nth-child(4) {
+    background: url(bg.jpg) no-repeat center center/cover;
+}
+
+.current {
+    display: block;
+}
+body > div {
+    width: 80%;
+    height: 800px;
+    position: relative;
+}
+
+.dots {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    bottom: 15px;
+}
+
+.dot {
+    width: 25px;
+    background-color: #000;
+    height: 5px;
+    margin: 0 5px;
+    opacity: .5;
+    cursor: pointer;
+}
+.active.dot {
+    opacity: 1;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#next {
+    right: 0;
+}
